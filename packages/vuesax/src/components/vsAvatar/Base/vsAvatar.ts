@@ -1,7 +1,6 @@
 import { VNode } from 'vue'
 import { Component, Prop, Watch } from 'vue-property-decorator'
 import VsComponent from '../../../mixins/component'
-import { setColor } from '../../../util/index'
 
 @Component
 export default class VsAvatar extends VsComponent {
@@ -68,12 +67,10 @@ export default class VsAvatar extends VsComponent {
 
   @Watch('badgeColor')
   handleBadgeColor() {
-    setColor('badge', this.badgeColor , this.$el)
     this.$el.classList.add('vs-change-color-badge')
   }
 
   mounted() {
-    setColor('badge', this.badgeColor , this.$el)
     this.$el.classList.add('vs-change-color-badge')
     if (this.getParent()) {
       this.index = this.getParent().avatars.length
