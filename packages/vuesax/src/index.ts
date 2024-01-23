@@ -1,17 +1,15 @@
 import * as vsComponents from './components/index'
 import defineVuesaxFunctions from './functions/defineVuesaxFunctions'
-import * as vsLayouts from './layout/index'
-import './styles/vuesax.sass'
 import { defineVuesaxOptions, VuesaxOptions } from './util/defineVuesaxOptions'
 
 const install = (Vue: any, options?: VuesaxOptions) => {
   // Components
   Object.values(vsComponents).forEach((vsComponent) => {
-    Vue.use(vsComponent)
-  })
-  // layout
-  Object.values(vsLayouts).forEach((vsLayout) => {
-    Vue.use(vsLayout)
+    if (options.components.length && !options.components.includes(vsComponent.name)) {
+      return;
+    } else {
+      Vue.use(vsComponent)
+    }
   })
 
   if (options) {

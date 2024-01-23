@@ -2,44 +2,31 @@
 .isMultipleSelected
   .vs-table__tr
     .vs-table__td
-      border-radius: 0px !important
+      border-radius: 0 !important
 .vs-table__tr
   padding: 5px
-  border: 0px
+  border: 0
   &.expand
     cursor: pointer
   &.vs-change-color
     .vs-table__td
-      background: -color('color', .1) !important
-      color: -color('color', 1) !important
+      background: -color('gray-2') !important
       &:hover
         background: -color('color', .2) !important
   &:first-of-type
     .vs-table__td
       &:last-child
-        border-radius: 0px 0px 15px 0px
+        border-radius: 0 0 15px 0
       &:first-child
-        border-radius: 0px 0px 0px 15px
-  &.isExpand:first-of-type
+        border-radius: 0 0 0 15px
+  &.isExpand
     .vs-table__td
       background: -color('gray-1') !important
-      border-radius: 0px
-  &.isExpand:not(:first-of-type)
-    .vs-table__td
-      background: -color('gray-1') !important
-      &:last-child
-        border-radius: 0px 15px 0px 0px
-      &:first-child
-        border-radius: 15px 0px 0px 0px
-    + .vs-table__tr__expand
-      td
-        border-radius: 0px 0px 15px 15px !important
   &.selected
     .vs-table__td
-      background: -color('color', .1) !important
-      color: -color('color', 1) !important
+      background: -color('gray-2', .5) !important
   .vs-table__td
-    background: -color('bg', .1)
+    background: -color('gray-2')
     color: -color('bg', 1)
   &.vs-change-color
     &:hover

@@ -2,6 +2,7 @@ import { setColor } from './index'
 
 export interface VuesaxOptions {
   colors?: VuesaxColors
+  components: string[],
 }
 
 export interface VuesaxColors {

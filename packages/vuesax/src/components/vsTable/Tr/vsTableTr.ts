@@ -34,7 +34,6 @@ export default class VsTableTr extends VsComponent {
     if (this.instanceExpand) {
       this.instanceExpand.$data.hidden = !this.instanceExpand.$data.hidden
       this.instanceExpand = null
-      // this.expand = false
     } else {
       const colspan = this.$parent.$el.querySelectorAll('thead th').length
       const trExpand = Vue.extend(expand)
@@ -44,7 +43,13 @@ export default class VsTableTr extends VsComponent {
       this.instanceExpand.vm = this.instanceExpand.$mount()
       this.instanceExpand.$data.hidden = false
       this.insertAfter(this.instanceExpand.vm.$el)
-      // this.expand = true
+    }
+  }
+
+  beforeDestroy() {
+    if (this.instanceExpand) {
+      this.instanceExpand.$data.hidden = !this.instanceExpand.$data.hidden
+      this.instanceExpand = null
     }
   }
 
