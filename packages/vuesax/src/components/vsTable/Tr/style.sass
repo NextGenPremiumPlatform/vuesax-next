@@ -13,12 +13,6 @@
       background: -color('gray-2') !important
       &:hover
         background: -color('color', .2) !important
-  &:first-of-type
-    .vs-table__td
-      &:last-child
-        border-radius: 0 0 15px 0
-      &:first-child
-        border-radius: 0 0 0 15px
   &.isExpand
     .vs-table__td
       background: -color('gray-1') !important
@@ -26,8 +20,7 @@
     .vs-table__td
       background: -color('gray-2', .5) !important
   .vs-table__td
-    background: -color('gray-2')
-    color: -color('bg', 1)
+    background: -color('gray-2', .5)
   &.vs-change-color
     &:hover
       .vs-table__td

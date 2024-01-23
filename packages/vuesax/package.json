@@ -1,6 +1,6 @@
 {
   "name": "vuesax-igorlink",
-  "version": "4.0.31",
+  "version": "4.0.33",
   "description": "Framework components for vuejs",
   "main": "dist/vuesax.js",
   "scripts": {
