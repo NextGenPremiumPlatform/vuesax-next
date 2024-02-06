@@ -37,7 +37,7 @@ export default class VsPagination extends VsComponent {
 
   @Prop({ default: 0, type: Number }) length: number
 
-  @Prop({ default: 9, type: Number }) max: number
+  @Prop({ default: 7, type: Number }) max: number
 
   @Prop({ default: 5, type: Number }) dottedNumber: number
 
