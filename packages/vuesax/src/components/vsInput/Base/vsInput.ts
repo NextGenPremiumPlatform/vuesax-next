@@ -10,6 +10,7 @@ export default class VsInput extends VsComponent {
   @Prop({ default: '' }) labelPlaceholder!: any
   @Prop({ default: '' }) label!: any
   @Prop({ type: Boolean, default: false }) block!: boolean
+  @Prop({ type: Boolean, default: false }) textarea!: boolean
   @Prop({ type: Boolean, default: false }) iconAfter!: boolean
   @Prop({ type: Boolean, default: false }) visiblePassword!: boolean
   @Prop({ type: Boolean, default: false }) loading!: boolean
@@ -38,7 +39,7 @@ export default class VsInput extends VsComponent {
   }
 
   enter(el: any, done: any) {
-    let h = el.scrollHeight
+    const h = el.scrollHeight
     el.style.height = h - 1 + 'px'
     done()
   }
@@ -67,7 +68,7 @@ export default class VsInput extends VsComponent {
 
   public render(h: any): VNode {
 
-    const input = h('input', {
+    const input = h(this.textarea ? 'textarea' : 'input', {
       staticClass: 'vs-input',
       domProps: {
         value: this.value

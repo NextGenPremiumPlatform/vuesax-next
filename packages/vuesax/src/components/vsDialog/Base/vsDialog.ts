@@ -153,7 +153,11 @@ export default class VsDialog extends VsComponent {
         fullScreen: this.fullScreen,
       },
       on: {
-        click: (evt: any) => {
+        mousedown: (evt: any) => {
+          if (evt.target !== this.$refs['dialog-content']) {
+            return
+          }
+
           if (!evt.target.closest('.vs-dialog') && !this.preventClose) {
             this.$emit('input', !this.value)
             this.$emit('close')
