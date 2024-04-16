@@ -12,5 +12,6 @@
   "vsTable": "./src/components/vsTable/Base/index.ts",
   "vsTableTr": "./src/components/vsTable/Tr/index.ts",
   "vsTableTh": "./src/components/vsTable/Th/index.ts",
-  "vsTableTd": "./src/components/vsTable/Td/index.ts"
+  "vsTableTd": "./src/components/vsTable/Td/index.ts",
+  "vsDialog": "./src/components/vsDialog/Base/index.ts"
 }
